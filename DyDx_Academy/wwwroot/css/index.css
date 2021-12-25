@@ -1,0 +1,106 @@
+﻿
+#section1 {
+    background-image: url(../img/mainsection_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#section2 {
+    background-color: #333333;
+}
+
+
+#section3 {
+}
+
+.contain3floor {
+    height: 500px
+}
+
+.contain3-control {
+    border-left: 5px solid black;
+    margin: 80px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 15%;
+}
+
+
+
+
+#section4 {
+    background-color: #171717;
+    height: auto;
+    color: white;
+}
+
+.contain4floor {
+    height: auto;
+}
+.startyourcourse {
+    padding: 80px;
+}
+.get-start-btn {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    transition: .5s;
+    padding: 10px;
+    text-decoration: none;
+}
+.get-start-btn:hover {
+    background-color: darkred;
+    color: white;
+
+}
+.traingyourskill {
+    padding: 80px;
+}
+#section5 {
+    background-color: #171717;
+    height: auto;
+}
+
+.contain5floor {
+    height: auto;
+}
+.interest-blog{
+    background-color: white;
+    height: 500px;
+}
+
+#section6 {
+    background-color: #212529;
+    height: auto;
+    background-image: url(../img/section5-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.director {
+    height: 80vh;
+    background-color: none;
+}
+
+.partner {
+    height: 20vh;
+    background-color: rgba(0, 0, 0, 0.556);
+}
+
+
+
+.word-welcome {
+    padding-top: 400px;
+    color: white;
+    text-shadow: 7px 7px 5px #140000;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,31 @@
+﻿@model int;
+
+@if (Model > 0)
+{
+    <li class="nav-item hovercart" style="font-size: smaller; margin-top: 4px;" >
+        <a class="nav-link text-white" style="display: flex; margin-left: -5px; margin-top: -8px;" asp-controller="Orders" asp-action="ShoppingCart">
+            <i class="bi bi-cart4 text-white" style="margin-top: 10px; padding-left: 8px;"></i> <p>@Model</p>
+        </a>
+    </li>
+}
+else
+{
+    <li class="nav-item" style="display: flex; font-size: smaller;">
+        
+            <i class="bi bi-cart4 text-white" style="margin-top: 10px;"></i> <p>0</p>
+        
+    </li>
+}
+
+
+<style>
+
+    .hovercart {
+        transition: .5s;
+        width: 45px;
+        height: 45px;
+        border-radius: 30px;
+    }.hovercart:hover {
+        background: lightgray;
+    }
+</style>

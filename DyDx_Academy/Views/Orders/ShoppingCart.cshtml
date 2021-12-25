@@ -1,0 +1,137 @@
+﻿@using DyDx_Academy.ViewModels;
+@model ShoppingCartVM
+
+@{ ViewData["Title"] = "All orders"; }
+
+
+<div class="row" style="min-height:880px" >
+    <div class="col-md-8 offset-2">
+        <div class="text-center" style="margin-top: 160px">
+            <h2>You shopping cart summary</h2>
+        </div>
+
+        <table class="table" style="margin-top: 80px">
+            <thead>
+                <tr>
+                    <th>Selected amount</th>
+                    <th>Movie</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
+                {
+                <tr>
+                    <td class="align-middle">@item.Amount</td>
+                    <td class="align-middle">@item.Courses.Name</td>
+                    <td class="align-middle">@item.Courses.Price.ToString("c")</td>
+                    <td class="align-middle">@((item.Amount*item.Courses.Price).ToString("c"))</td>
+
+                    
+                    <td class="align-middle">
+
+
+
+                        <a class="text-danger" asp-controller="Orders" asp-action="RemoveItemFromShoppingCart"
+                           asp-route-id="@item.Courses.Id">
+                            <i class="bi bi-cart-dash"></i>
+                        </a>
+                        @*
+            <a class="text-success" asp-controller="Orders" asp-action="AddItemToShoppingCart"
+               asp-route-id="@item.Courses.Id">
+                <i class="bi bi-cart-plus"></i>
+            </a>
+
+
+        </td>
+                        *@
+
+</tr>
+}
+            </tbody>
+            <tfoot style="margin-top: 40px">
+                <tr>
+                    <td colspan="2"></td>
+                    <td><b>Total:</b></td>
+                    <td>
+                        @Model.ShoppingCartTotal.ToString("c")
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <div class="text-center" style="margin-top: 120px; margin-bottom: 80px; ">
+            <div class="btn-group">
+
+                <span style="padding:5px"></span>
+                <a class="btn btn-outline-success" asp-controller="Course" asp-action="Index">
+                    Add more items
+                </a>
+                <span style="padding:5px"></span>
+                <a class="btn btn-outline-success" asp-controller="Course" asp-action="Index">
+                    Pay With DyDx Point
+                </a>
+                <a class="btn btn-outline-primary" asp-action="CompleteOrder">
+                    Complete order
+                </a>
+                <span style="padding:5px"></span>
+                <div id="paypal-btn"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts{
+
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
+<script>
+
+    let _total = @Html.Raw(Model.ShoppingCartTotal);
+
+        paypal.Button.render({
+            //Configure environment
+            env: 'sandbox',
+            client: {
+                sandbox: 'ECcfs3P8X1230NSFV2qcemB1_-61wy99mgQjuyp5JTd8JC16KsH4dENPpLUO1QZDflzi_eG39ByQGJS9'
+            },
+
+            //Customize button
+            locale: 'en_US',
+            style: {
+                size: 'small',
+                color: 'gold',
+                shape: 'pill'
+            },
+            commit: true,
+
+            //Set up a payment
+            payment: function (data, actions) {
+                return actions.payment.create({
+                    transactions: [{
+                        amount: {
+                            total: _total,
+                            currency: 'USD'
+                        }
+                    }]
+                });
+            },
+
+            //Execute the payment
+            onAuthorize: function (data, actions) {
+                return actions.payment.execute().then(function () {
+                    var url = '@Url.Action("CompleteOrder", "Orders", new { })';
+                    window.location.href = url;
+                });
+            }
+
+        }, '#paypal-btn')
+
+</script>
+}

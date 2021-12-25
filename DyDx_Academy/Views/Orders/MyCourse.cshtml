@@ -1,0 +1,109 @@
+﻿@model List<Order>
+
+@{
+    ViewData["Title"] = "All orders";
+}
+
+
+<div id="section2" class="h-100">
+    <div class="row course container" style="margin: 0 auto;">
+        <div class="text-center text-light" style="margin-top: 160px">
+            <h2>คอสของคุณ</h2>
+        </div>
+
+
+
+        <div class="row" style="border-top: 3px solid white; padding-top: 30px; ">
+            @* freesasdaasd space *@
+            <div style=" margin-bottom: 10%;">
+
+
+
+
+
+
+
+                <div class="container">
+
+
+                    <div class="col-12" style="min-height:880px">
+
+                        @foreach (var order in Model)
+                        {
+
+
+                                @foreach (var item in order.OrderItems)
+                                {
+                                    if (item.Courses.Name == "HTML 101")
+                                    {
+
+
+                                        <a class="col-3" asp-area="" asp-controller="HTML_101" asp-action="Part1">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); ">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </a>
+
+
+
+
+
+                                    }
+                                    if (item.Courses.Name == "CSS 101")
+                                    {
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); ">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </a>
+                                    }
+                                }
+
+                        }
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+        <div class="row"></div>
+    </div>
+</div>
+
+

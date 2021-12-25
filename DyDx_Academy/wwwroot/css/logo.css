@@ -1,0 +1,48 @@
+﻿.dydx {
+    border: 3px solid white;
+    color: white;
+    padding: 5px;
+    text-shadow: 3px 3px 5px #140000;
+}
+
+.academy {
+    margin-left: 10px;
+    color: white;
+    display: inline-flex;
+    text-shadow: 3px 3px 5px #140000;
+}
+
+.cademy {
+    color: white;
+    line-height: 2.3rem;
+    text-shadow: 3px 3px 5px #140000;
+}
+
+.A-word {
+    color: white;
+    border-bottom: 5px solid white;
+    padding-bottom: 0px;
+    line-height: 2.3rem;
+    text-shadow: 3px 3px 5px #140000;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+}
+
+
+.bg-navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    color: white !important;
+    font-size: 1.5rem;
+    z-index: 10;
+}

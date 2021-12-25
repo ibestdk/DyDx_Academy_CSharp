@@ -1,0 +1,103 @@
+﻿@model DyDx_Academy.Models.ApplicationUser
+@{
+    ViewData["Title"] = "แก้ไขข้อมูลสมาชิก";
+}
+
+
+<section style="height: 100vh; background-color: #F3F3F3;">
+
+
+    <div class="container" style="padding-top: 8%; width: 80%;">
+        <div class="card">
+            <div class="card-header text-light bg-dark">
+            </div>
+            <div class="row card-body bg-white" style="height: 630px; margin: 0; border-radius: 10px;">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div class="d-flex">
+
+
+                        <div class="col-3" style="border-right: 1px solid lightgray;">
+
+                            <div class="container" style="margin: 0 auto;">
+
+                                @if (string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <img class="img rounded-circle"
+                                         src="@Url.Content("~/wwwroot/images/" + "nopic.png")"
+                                         width="240" height="240" />
+                                }
+                                else
+                                {
+
+                                    <img class="img img-control rounded-circle" width="240" height="240" src="@Url.Content($"~/wwwroot/images/{@Model.ImageUrl}")" id="blah" />
+                                }
+                                <div class="form-group">
+                                    <label asp-for="ImageUrl">Upload File :</label>
+                                    <input asp-for="ImageUrl" class="form-control" accept="images/*" type='file'  name="files"  id="imgInp" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col" style="margin-left: 50px; margin-top: 30px; ">
+                            <h2 class="display-4" style="margin-bottom: 50px;">Basic info</h2>
+                            <div class="" style="font-size: 1.8rem !important;">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="form-group">
+                                    <label asp-for="FullName" class="control-label"></label>
+                                    <input asp-for="FullName" class="form-control" />
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label asp-for="BirthDate" class="control-label"></label>
+                                    <input type="date" asp-for="BirthDate" class="form-control" />
+                                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="PhoneNumber" class="control-label"></label>
+                                    <input asp-for="PhoneNumber" class="form-control" />
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" value="บันทึก" class="btn btn-primary" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

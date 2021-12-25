@@ -1,0 +1,99 @@
+﻿@model DyDx_Academy.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "ลงทะเบียน";
+}
+<link href="~/css/account.css" rel="stylesheet" />
+
+<section class="bg-controller">
+
+    <div class="container" style="padding-top: 12%;">
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="alert alert-primary">สวัสดีคุณ @User.Identity.Name</div>
+        }
+        else
+        {
+
+            <div class="form-register" style="margin: 0 auto; width: 400px; height: auto;">
+                <div style="padding: 40px;">
+                    <form asp-controller="Account" asp-action="Create">
+                        <h3 style="text-align:center;">กรอกข้อมูลเพื่อสมัครสมาชิก</h3>
+                        <div class="container">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label asp-for="UserName"></label>
+                                    <input asp-for="UserName" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="UserName"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="Email"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="Password"></label>
+                                    <input asp-for="Password" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="Password"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ConfirmPassword"></label>
+                                    <input asp-for="ConfirmPassword" class="form-control" />
+                                    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                                </div>
+
+                                <div class="form-group pt-2">
+                                    <button type="submit" class="button-register" style="width:100%">สมัครสมาชิก</button>
+                                    <a type="button" asp-area="" asp-controller="Account" asp-action="Login" class="button-login d-inline-block mt-3" style="width:100%">ฉันมีรหัสอยู่เเล้ว</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        }
+
+    </div>
+    <style>
+        .button-register {
+            border-radius: 10px;
+            background-color: #ffafc3;
+            color: white;
+            transition: .5s;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+            border: none;
+        }
+
+            .button-register:hover {
+                background-color: #f05b80;
+
+                
+            }
+
+        .button-login {
+            border-radius: 10px;
+            border: 1px solid gray;
+            color: gray;
+            transition: .5s;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+            .button-login:hover {
+                background-color: #6e98db;
+                color: white;
+                border: 1px solid white;
+            }
+    </style>
+</section>
+
+

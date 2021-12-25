@@ -1,0 +1,413 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="~/css/index.css" rel="stylesheet" />
+
+<div id="section1" class="vh-100">
+
+    <div class="align-middle text-center word-welcome">
+        <h1 class="display-4"> KNOWLEDGE IS ENDLESS TO LEARN </h1>
+        <p>KNOWLEDGE IS ENDLESS TO LEARN </p>
+
+    </div>
+</div>
+
+
+<div id="section2" class="" style="height:80vh">
+    <div class="" style="height: 60%; flex-direction: column">
+        <div class=" text-light">
+            <div class="text-center" style="margin: 0 auto; padding-top: 5%">
+                <h2>Courses Recommended</h2>
+                <p>
+                    คอสยอดนิยมจากทางเราที่มีผู้ให้ความสนใจในการเรียนมากที่สุดอย่างต่อเนื่องจนถึงขณะนี้
+                </p>
+                <div class="" style="margin: 0 10%;">
+                    <div class="row text-dark">
+                        <div class="col-md-3 col-sm-3" style="margin: 0 auto;">
+                            <a asp-action="Details" asp-controller="Course" asp-route-id="3">
+                                <div class="card card-block">
+                                    <img style="border-radius: 10px 10px 0 0;" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/course/course/html.jpg" alt="Photo of sunset">
+                                    <div style="padding: 10px">
+                                        <h5 class="card-title mt-3 mb-3">HTML 101</h5>
+                                        <p class="card-text" style="text-align: center;">มาเริ่มต้นทำเว็บด้วย HTML อย่างง่ายกันเถอะ!</p>
+                                    </div>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3" style="margin: 0 auto;">
+                            <a asp-action="Details" asp-controller="Course" asp-route-id="6">
+                                <div class="card card-block">
+                                    <img style="border-radius: 10px 10px 0 0;" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/course/course/arduino-course.jpg" alt="Photo of sunset">
+                                    <div style="padding: 10px">
+                                        <h5 class="card-title  mt-3 mb-3">Arduino 101</h5>
+                                        <p class="card-text" style="text-align: center;">Arduino 101 ที่จะทำให้คุณสนุกเพลิดเพลินไปกับอุปกรณ์ IoT ต่างๆรอบตัวคุณ</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-3" style="margin: 0 auto;">
+                            <a asp-action="Details" asp-controller="Course" asp-route-id="2">
+                                <div class="card card-block">
+                                    <img style="border-radius: 10px 10px 0 0;" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/course/course/CSS.jpg" alt="Photo of sunset">
+                                    <div style="padding: 10px">
+                                        <h5 class="card-title  mt-3 mb-3">CSS 101 </h5>
+                                        <p class="card-text" style="text-align: center;">มาทำให้เว็บไซต์ของคุณดูสวยงามด้วย css กันเถอะ!</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3" style="margin: 0 auto;">
+                            <a asp-action="Details" asp-controller="Course" asp-route-id="5">
+                                <div class="card card-block">
+                                    <img style="border-radius: 10px 10px 0 0;" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/course/course/arzure-course.jpg" alt="Photo of sunset">
+                                    <div style="padding: 10px">
+                                        <h5 class="card-title  mt-3 mb-3">Basic Microsoft Azure AZ-900</h5>
+                                        <p class="card-text" style="text-align: center;">คอสของเราจะเพิ่มทักษะของคุณให้เป็น Cloud Developer</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="" style="width:100% ; margin: 0 auto">
+
+        </div>
+    </div>
+</div>
+
+
+<div id="section3" class="h-auto">
+    <div>
+        <div class="row contain3floor" style="margin: 0 !important;">
+            <div class="col bg-light" style="margin: 0 !important;">
+                <div class="contain3-control">
+                    <h5>
+                        อะไรคือ dydx academy?
+                    </h5>
+                    <p>
+                        dydx academy คือ แหล่งการเรียนรู้ที่จัดตั้งจาก กลุ่มนักศึกษากลุ่มหนึ่งที่เรียกตนเองว่า dydx
+                        infinit
+                        จัดตั้งเว็บไซต์นี้มาเพื่อแบ่งปันเเละเเชร์ประสบการณ์ต่างๆเกี่ยกับการเรียนรู้ด้านการเขียนโปรแกรมให้กับน้องๆพี่ๆเพื่อนๆที่สนใจในการเขียนโปรแกรมไม่ว่าจะเป็นการเริ่มต้นเขียนจนไปถึงระดับกลาง
+                        เพื่อให้ทุกคนได้มีความสามารถเพิ่มขึ้น
+                    </p>
+                </div>
+
+            </div>
+            <div class="col bg-light ">
+                <div class="text-center pt-5">
+                    <img src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/pic1.jpg" />
+                </div>
+            </div>
+
+        </div>
+        <div class="row contain3floor " style="margin: 0 !important;">
+            <div class="col bg-light ">
+                <div class="text-center pt-5">
+                    <img src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/pic2.jpg" />
+                </div>
+            </div>
+            <div class="col bg-light">
+                <div class="contain3-control">
+                    <h5>
+                        ทำไมถึงเกิด dydx academy
+                    </h5>
+                    <p>
+                        dydx academy
+                        เกิดจากแนวคิดที่ว่าความรู้นั้นไม่ได้มาจากห้องเรียนในโรงเรียนหรือมหาวิทยาลัยเพียงอย่างเดียว
+                        เเต่ความรู้นั้นเกิดขึ้นจากรอบๆตัวเราไ่ม่ว่าจะที่ไหนเราก็สามารถเรียนรู้ได้
+                        การเรียนนั้นไม่ได้จำเป็นจะต้องจำกัดอยู่เเค่เพียงห้องสี่เหลี่ยมอีกต่อไป
+                        เพราะในยุคสมัยนี้การณ์เรียนรู้นั้นเปิดกว้างไม่มีวันสิ้นสุด
+                        ทั้งหมดนี้ล้วนเเต่อยู่ที่ตัวของเราว่าเรานั้นจะไปได้ไกลเพียงเเค่ไหน
+                        หากนำเอาทั้งความรู้เเละความพยายามของเรานั้น
+                        มารวมกันก็จะสามารถนำพาเราไปยังจุดปลายทางที่เราวาดฝันไว้ได้
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row contain3floor " style="margin: 0 !important;">
+            <div class="col bg-light">
+                <div class="contain3-control">
+                    <h5>
+                        ใครบ้างที่สามารถเรียนกับเราได้
+                    </h5>
+
+                    <p>
+                        ในเฟสเเรก เราจะขอสงวนสิทธิให้กับนักศึกษามหาลัยธุรกิจบัณฑิต สาขาวิศวกรรมคอมพิวเตอร์
+                        ได้เข้าสิทธิที่เข้าเรียนโดยไม่มีค่าใช่จ่ายเป็นจำนวณสองคอสเรียนเพื่อทดสอบระบบของตัวเว็บให้มีความพร้อมที่จะสามารถรอบรับกับผู้ที่ต้องการจะศึกษาด้านการเขียนโปรแกรม
+                    </p>
+                </div>
+            </div>
+            <div class="col bg-light">
+                <div class="text-center pt-5">
+                    <img src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/pic3.jpg" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="section4" class="">
+    <div>
+        <div class="row contain4floor p-5" style="margin: 0 !important;">
+            <div class="col startyourcourse">
+                <h5>
+                    เริ่มคอสเรียนคอสเเรกของคุณ
+                </h5>
+                <p>
+                    จะมัวรอช้าอะไรกันอยู่หละมาเริ่มต้นเรียนคอสเเรกของคุณกันเถอะ!!
+                </p>
+                <a class="get-start-btn">
+                    Get Start
+                </a>
+            </div>
+            <div class="col" style="padding: 0 !important;">
+                <div style="display:flex;">
+                    <img style="margin: 0 auto;" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/1161.jpg" />
+                </div>
+            </div>
+
+        </div>
+        <div class="row contain4floor " style="margin: 0 !important;">
+            <div class="col " style="padding: 0;">
+                <img src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/section4.jpg" alt="Alternate Text" />
+            </div>
+            <div class="col traingyourskill " style="margin-top: 7%;">
+                <h5>การฝึกทักษะ</h5>
+                <p>
+                    การฝึกทักษะนั้นเป็นสิ่งจำเป็น ทุกๆคนนั้นควรจะต้องหมั่นฝึกฝนอยู่สม่ำเสมอ
+                    เพื่อเพิ่มความสามารถของตัวเองให้เพิ่มสูงขึ้น เพื่อให้สามารถทำงานที่มีความแปลกใหม่
+                    เเละมีความยากที่มากขึ้นได้
+                    หลังจากที่เรายิ่งมีความสามารถเเล้วสิ่งที่เราจะได้เป็นผลตอบเเทนก็คือค่าตัวที่สูงขึ้นเช่นเดียวกัน
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="section5" class="h-auto">
+    <div class="row interest-blog" style="margin: 0 !important;">
+        <div class="row contain5floor h-25" style="margin: 0 !important;">
+            <div class="text-center pt-4">
+                <h5>
+                    บทความที่น่าสนใจ
+                </h5>
+                <p>
+                    long established fact that a reader will be
+                </p>
+            </div>
+
+        </div>
+        <div class="row h-75" style="margin: 0 !important;"></div>
+    </div>
+
+
+    <div class="row contain5floor" style="margin: 0 !important;">
+        <div class="col text-light p-5" style="margin-top: 3%">
+            <h5>
+                นำเสนอสิ่งที่น่าสนใจของคุณด้วยสิ่งที่สร้างขึ้น
+            </h5>
+            <p>
+                t is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                distribution of letters, as opposed to using 'Content here, content here', making it look like
+                readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                (injected humour and the like).
+            </p>
+        </div>
+        <div class="col" style="padding: 0;">
+            <img width="100%" height="auto" src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/index/section4-2.jpg" alt="Alternate Text" />
+        </div>
+
+    </div>
+</div>
+
+<div id="section6" class="vh-100">
+    <div>
+        <div class="row director " style="margin: 0 !important;">
+            <div class="row " style="margin: 0 !important;">
+                <h3 style="margin:0 auto;" class="display-4">
+                    Coaches and Instructors
+                </h3>
+            </div>
+            <div class="row text-light" style="margin: 0 !important; padding-top: 70px;">
+                <div class="col" style="margin-bottom: 200px; display: grid; padding-top: 80px;">
+                    <img class="rounded-circle" style="height: 220px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/instructor/ibestdk.jpg" />
+
+                    <div style="text-align: center" class="text-light">
+                        <h4>Jirat Deekhum</h4>
+                        <p>Instructors</p>
+                    </div>
+                    <ul style="width: 70%; margin: 0 auto">
+                        <li>- 3rd year of B.Eng (Computer Engineer)</li>
+                        <li>
+                            - Web Developer Intern at T Capital Technology Co. Ltd
+                        </li>
+                        <li>- Fullstack Web Devoloper</li>
+                        <li>- Web Founder & Lead Developer of AdopPix</li>
+                    </ul>
+                </div>
+
+                <div class="col" style="margin-bottom: 200px; display: grid; ">
+                    <img class="rounded-circle" style="height: 220px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/instructor/hidekun.jpg" />
+
+                    <div style="text-align: center" class="text-light">
+                        <h4>Peerawit Vongsinpratueng</h4>
+                        <p>Instructors</p>
+                    </div>
+                    <ul style="width: 70%; margin: 0 auto">
+                        <li>- 3rd year of B.Eng (Computer Engineer) DPU</li>
+                        <li>
+                            - First-runner up of Thailand 4.0 ioT Project Competition
+                            (2018) at KMUTNB
+                        </li>
+                        <li>- ioT and AWS Teaching Assistant at DPU</li>
+                        <li>
+                            - Web Developer and Web Tester Intern at T Capital
+                            Technology Co. Ltd
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col" style="margin-bottom: 200px; display: grid; padding-top: 80px;">
+                    <img class="rounded-circle" style="height: 220px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/instructor/suppavit1412.jpg" />
+
+                    <div style="text-align: center" class="text-light">
+                        <h4>Suppavit Vilikit</h4>
+                        <p>Instructors</p>
+                    </div>
+                    <ul style="width: 70%; margin: 0 auto">
+                        <li>- 3rd year of B.Eng (Computer Engineer)</li>
+                        <li>
+                            - Web Developer Intern at T Capital Technology Co. Ltd
+                        </li>
+                        <li> - business analyst at Buzzfreed Solution Software House</li>
+                        <li>- Front-end Web Dev</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row partner" style="flex-direction: column; margin: 0 !important;">
+            <div class="row text-center" style="height: 40%; margin: 0 !important;">
+                <h3 class="text-light display-4 font-weight-bold ">Partner</h3>
+            </div>
+            <div class="row" style="height:60%; margin: 0 !important;">
+                <div class="col mt-3 " style="display:flex;">
+                    <img style="height: 46px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/partner/AdopPix.png" />
+                </div>
+                <div class="col mt-3 px-2" style="display: flex; width: 50% !important;">
+                    <img style="height: 46px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/partner/dydx.png" />
+                </div>
+                <div class="col mt-3 " style="display:flex;">
+                    <img style="height: 46px; width: auto; margin: 0 auto"
+                         src="https://dydx-academy-s3.s3.ap-southeast-1.amazonaws.com/Web-img-resource/partner/OnlySubs.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+
+    p {
+        overflow: hidden;
+        
+    }
+
+    h5 {
+        font-weight: 700;
+        font-size: medium;
+    }
+
+    div [class^="col-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .card {
+        transition: 0.5s;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    .card-title {
+        font-size: 15px;
+        transition: 1s;
+        cursor: pointer;
+    }
+
+        .card-title i {
+            font-size: 15px;
+            transition: 1s;
+            cursor: pointer;
+            color: #ffa710
+        }
+
+            .card-title i:hover {
+                transform: scale(1.25) rotate(100deg);
+                color: #18d4ca;
+            }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    }
+
+    .card-text {
+        height: 80px;
+    }
+
+    .card::before, .card::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale3d(0, 0, 1);
+        content: '';
+        pointer-events: none;
+    }
+
+    .card::before {
+        transform-origin: left top;
+    }
+
+    .card::after {
+        transform-origin: right bottom;
+    }
+
+    .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+        transform: scale3d(1, 1, 1);
+    }
+    a{
+        text-decoration:none;
+        color:black;
+
+    }
+    a:hover{
+    color:black;    
+    }
+</style>

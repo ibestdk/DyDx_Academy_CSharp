@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DyDx_Academy</title>
+    <link href="~/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/index.css" />
+    <link href="~/css/logo.css" rel="stylesheet" />
+</head>
+<body>
+    <header style="position:fixed">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-navbar box-shadow">
+            <div class="container">
+
+                <div class="text-start" style="border-right: 2px solid white;">
+                    <div class="logo">
+                        <h1 class="dydx">Dy/Dx</h1>
+                        <a class="academy" style="text-decoration: none;">
+                            <h1 class="A-word">A</h1>
+                            <h1 class="cademy">cademy</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+
+                    <ul class="navbar-nav flex-grow-1 mr-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Course" asp-action="Index">Course</a>
+                        </li>
+                        @*
+           <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Blog" asp-action="Index">Blog</a>
+        </li>
+                        *@
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="d-flex">
+                        <ul class="navbar-nav flex-grow-1">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+
+
+
+                                @await Component.InvokeAsync("ShoppingCartSummary")
+                                
+
+                                <li class="nav-item" style=" padding-left: 20px;">
+                                    @*User profile section*@
+
+
+
+                                    
+                                    <div class="dropdown" style="margin-top: 5px;">
+                                        <button class="btn dropdown-toggle text-light" type="button" id="profile-btn" data-toggle="dropdown"
+                                                aria-expanded="false">
+                                            <i class="bi bi-person-badge text-light"></i> คุณ : @User.Identity.Name
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="profile-btn">
+                                            <li>
+                                                <a class="dropdown-item" asp-area="" asp-controller="Member" asp-action="Index">
+                                                    <i class="bi bi-person-fill"></i> Profile
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" asp-area="" asp-controller="Orders" asp-action="MyCourse">
+                                                    <i class="bi bi-book"></i> My Course
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" asp-area="" asp-controller="Member" asp-action="Redeem">
+                                                    <i class="bi bi-credit-card-2-front-fill"></i> Redeem
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" asp-controller="Orders" asp-action="Index">
+                                                    <i class="bi bi-list"></i> Orders
+                                                </a>
+                                            </li>
+                                            <li style=" width: 100%;  border-top: 1px solid black;"></li>
+                                            <li>
+                                                <form asp-controller="Account" asp-action="Logout" class="form-inline dropdown-item">
+
+                                                    <button type="submit" class="" style="background: none; border: none; padding-left: 2px; width: 100%; text-align: left; "><i class="bi bi-box-arrow-right"></i> Logout</button>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    @*User profile section*@
+                                </li>
+
+
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-light"
+                                       asp-area=""
+                                       asp-controller="Account"
+                                       asp-action="Login">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light button-control"
+                                       asp-area=""
+                                       asp-controller="Account"
+                                       asp-action="Index">Sign Up</a>
+                                </li>
+                            }
+                        </ul>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted" style="background: #323232;">
+        <section>
+            <div class="container">
+
+
+                <div class=" row footer-control">
+                    <div class="col">
+                        <h3>Contact Infomation</h3>
+                        <ul>
+                            <li>info@dydxacademy.co</li>
+                            <li>02-999-9999</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>Courses</li>
+                            <li>Blog</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h3>Social media</h3>
+                        <ul>
+                            <li>
+                                Facebook
+                            </li>
+                            <li>
+                                Youtube
+                            </li>
+                            <li>
+                                Discord
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=" columns copyright" style="text-align: center; background: #252525;">
+                <div class="container bottom-control">
+                    &copy; 2021 All Rights Reserved <a asp-area="" asp-controller="Home" asp-action="Terms ">Terms </a> of Use and <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+
+            </div>
+        </section>
+
+    </footer>
+    <style>
+        .linkto-profile {
+            text-decoration: none;
+            color: white;
+            transition: .5s;
+        }
+
+            .linkto-profile:hover {
+                text-decoration: none;
+                color: darkgray;
+            }
+
+        .button-control {
+            border-radius: 10px;
+            background-color: white;
+            color: gray !important;
+        }
+    </style>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

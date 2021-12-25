@@ -1,0 +1,75 @@
+﻿@model DyDx_Academy.Models.ApplicationUser
+@{
+    ViewData["Title"] = "ข้อมูลสมาชิก";
+}
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<section style="height: 100vh; background-color: #F3F3F3;">
+
+
+    <div class="container" style="padding-top: 8%; width: 80%;" >
+        <div class="card">
+            <div class="card-header text-light bg-dark">
+            </div>
+            <div class="row card-body bg-white" style="height: 630px; margin: 0; border-radius: 10px;">
+                <div class="col-3" style="border-right: 1px solid lightgray;">
+                    <div class="container" style="margin: 0 auto;">
+
+                        @if (string.IsNullOrEmpty(Model.ImageUrl))
+                        {
+                            <img class="img rounded-circle"
+                                 src="@Url.Content("~/wwwroot/images/" + "nopic.png")"
+                                 width="240" height="240" />
+                        }
+                        else
+                        {
+                            <img class="img img-control rounded-circle"
+                                 src="@Url.Content("~/wwwroot/images/" + @Model.ImageUrl)"
+                                 width="240" height="240" />
+                        }
+
+                    </div>
+                </div>
+                
+                <div class="col" style="margin-left: 50px; margin-top: 30px; ">
+                    <h2 class="display-4" style="margin-bottom: 50px;">Basic info</h2>
+                    <div class="" style="font-size: 1.8rem !important;">
+
+
+                        <h5 class="pt-4 card-title">UserName : @Model.UserName</h5>
+                        <h5 class="pt-4 card-title">Email : @Model.Email</h5>
+                        <h5 class="pt-4 card-title">ชื่อ-สกุล : @Model.FullName</h5>
+                        <h5 class="pt-4 card-title">เบอร์โทร : @Model.PhoneNumber</h5>
+                        <h5 class="pt-4 card-title">วันเกิด : @Model.BirthDate.ToString("d MMMM yyyy")</h5>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <a asp-controller="Member"
+                           asp-action="Edit"
+                           asp-route-id="@Model.Id"
+                           class="btn btn-link text-dark">
+                            แก้ไข
+                        </a>
+                </div>
+                
+            </div>
+            <div class="card-footer" style="padding: 0; display: none;">
+                <nav class="navbar navbar-light bg-white text-dark">
+                    <div class="container-fluid">
+                        <a asp-controller="Member"
+                           asp-action="Edit"
+                           asp-route-id="@Model.Id"
+                           class="btn btn-link text-dark">
+                            แก้ไข
+                        </a>
+
+                        <form asp-controller="Account" asp-action="Logout" class="d-flex">
+                            <button type="submit" class="btn btn-link text-dark">Logout</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</section>

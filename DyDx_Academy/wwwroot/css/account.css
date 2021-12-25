@@ -1,0 +1,16 @@
+﻿.form-login{
+    border-radius: 10px;
+    background-color: white;
+}
+.form-register{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.bg-controller {
+    background-image: url(../img/mainsection_bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
