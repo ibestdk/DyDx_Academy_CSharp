@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ntJZ1lusJiW+R+3dnrwpIAh+7s33yY1R1sD710JDSAFL09hqiSy1qklhw/XBeDKlzrTzwLD7i7fBnH9HzY9kRw==",
+  "dgSpecHash": "MXRPeA1rRDcc3Ov6OL89zfSFQsWb8r6G8pgja07nqCcPQXN9Q53g5gClyTrOZ666Vt8TY1AzU7r4wIlqgELEEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BestO\\source\\repos\\DyDx_Academy\\DyDx_Academy\\DyDx_Academy.csproj",
+  "projectFilePath": "C:\\Users\\BestO\\Documents\\GitHub\\DyDx_Academy_CSharp\\DyDx_Academy\\DyDx_Academy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BestO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\BestO\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.1\\microsoft.aspnetcore.cryptography.internal.5.0.1.nupkg.sha512",

@@ -5959,11 +5959,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BestO\\source\\repos\\DyDx_Academy\\DyDx_Academy\\DyDx_Academy.csproj",
+      "projectUniqueName": "C:\\Users\\BestO\\Documents\\GitHub\\DyDx_Academy_CSharp\\DyDx_Academy\\DyDx_Academy.csproj",
       "projectName": "DyDx_Academy",
-      "projectPath": "C:\\Users\\BestO\\source\\repos\\DyDx_Academy\\DyDx_Academy\\DyDx_Academy.csproj",
+      "projectPath": "C:\\Users\\BestO\\Documents\\GitHub\\DyDx_Academy_CSharp\\DyDx_Academy\\DyDx_Academy.csproj",
       "packagesPath": "C:\\Users\\BestO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BestO\\source\\repos\\DyDx_Academy\\DyDx_Academy\\obj\\",
+      "outputPath": "C:\\Users\\BestO\\Documents\\GitHub\\DyDx_Academy_CSharp\\DyDx_Academy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\BestO\\AppData\\Roaming\\NuGet\\NuGet.Config",
