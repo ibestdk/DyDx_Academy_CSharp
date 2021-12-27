@@ -28,6 +28,7 @@ namespace DyDx_Academy.Controllers
             _context = context;
         }
 
+        [Route("Account/SighUp")]
         public IActionResult Index()
         {
             return View();
@@ -41,6 +42,7 @@ namespace DyDx_Academy.Controllers
             return View();
         }
 
+        [Route("Account/SighUp")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(RegisterViewModel data)
@@ -80,13 +82,13 @@ namespace DyDx_Academy.Controllers
             return View("Index", data);
         }
 
-
+        [Route("Account/SignIn")]
         public IActionResult Login()
         {
             return View(new LoginViewModel());
         }
 
-
+        [Route("Account/SignIn")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel loginVM)
