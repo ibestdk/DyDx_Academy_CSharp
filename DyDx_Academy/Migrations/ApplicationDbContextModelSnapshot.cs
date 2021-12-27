@@ -93,6 +93,7 @@ namespace DyDx_Academy.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
@@ -294,13 +295,13 @@ namespace DyDx_Academy.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ec314b0e-cdc9-4da2-8693-63191d3e80aa",
+                            Id = "f11f99aa-e8ba-4023-8dee-93ea905ce09a",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "a26dd607-cb23-46fe-bbb0-16ef7ec206d6",
+                            Id = "04aafacd-410e-4807-a40b-29360b9b51e3",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });

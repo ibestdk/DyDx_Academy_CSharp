@@ -18,12 +18,14 @@ namespace DyDx_Academy.ViewModels
         
         [Required(ErrorMessage = "กรุณากรอก รหัสผ่าน ด้วยครับ")]
         [Display(Name = "Password :")]
+        [StringLength(20, MinimumLength = 8, ErrorMessage = "ความยาวต้องมากว่า 8 ตัวอักษรเเละต้องไม่เกิน 20 ตัวอักษร")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Required(ErrorMessage = "กรุณากรอก รหัสผ่าน อีกครั้งด้วยครับ")]
         [Display(Name = "Password :")]
         [DataType(DataType.Password)]
+        [StringLength(20, MinimumLength = 8, ErrorMessage = "ความยาวต้องมากว่า 8 ตัวอักษรเเละต้องไม่เกิน 20 ตัวอักษร")]
         [Compare("Password", ErrorMessage ="รหัสผ่านไม่ตรงกัน")]
         public string ConfirmPassword { get; set; }
     }

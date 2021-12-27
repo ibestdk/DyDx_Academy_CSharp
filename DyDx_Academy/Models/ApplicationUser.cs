@@ -16,6 +16,7 @@ namespace DyDx_Academy.Models
 
 
 
+
         public List<Order> Order { get; set; }
 
         internal object GetUserId(ClaimsPrincipal user)

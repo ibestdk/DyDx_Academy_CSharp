@@ -8,7 +8,7 @@
 <div id="section2" class="h-100">
     <div class="row course container" style="margin: 0 auto;">
         <div class="text-center text-light" style="margin-top: 160px">
-            <h2>คอสของคุณ</h2>
+            <h2 style="font-size:4rem;">คอร์สของคุณ</h2>
         </div>
 
 
@@ -26,47 +26,22 @@
                 <div class="container">
 
 
-                    <div class="col-12" style="min-height:880px">
+                    <div class="col-12" style="min-height: 880px; display: grid; grid-template-columns: 300px 300px 300px auto; grid-gap: 130px;">
 
                         @foreach (var order in Model)
                         {
 
 
-                                @foreach (var item in order.OrderItems)
+                            @foreach (var item in order.OrderItems)
+                            {
+                                if (item.Courses.Name == "HTML 101")
                                 {
-                                    if (item.Courses.Name == "HTML 101")
-                                    {
+
+                                    <div class="">
 
 
-                                        <a class="col-3" asp-area="" asp-controller="HTML_101" asp-action="Part1">
-                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); ">
-
-
-
-                                                <div>
-
-                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
-                                                    <div style="padding: 25px;">
-
-
-
-                                                        <span class=""></span> @item.Courses.Name
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </a>
-
-
-
-
-
-                                    }
-                                    if (item.Courses.Name == "CSS 101")
-                                    {
-
-                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1">
-                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); ">
+                                        <a class="" asp-area="" asp-controller="HTML_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold; ">
 
 
 
@@ -83,14 +58,146 @@
                                             </div>
 
                                         </a>
-                                    }
+                                    </div>
+
+
+
+
+
                                 }
+                                if (item.Courses.Name == "CSS 101")
+                                {
+                                    <div class="col-3">
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold; ">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                }
+                                if (item.Courses.Name == "JavaScript 101")
+                                {
+                                    <div class="col-3">
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold;">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                }
+                                if (item.Courses.Name == "Flutter 101")
+                                {
+                                    <div class="col-3">
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold;">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                }
+                                if (item.Courses.Name == "Basic Microsoft Azure AZ-900 Exam")
+                                {
+                                    <div class="col-3">
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold;">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                }
+                                if (item.Courses.Name == "Arduino 101")
+                                {
+                                    <div class="col-3">
+
+                                        <a class="" asp-area="" asp-controller="CSS_101" asp-action="Part1" style="text-decoration: none">
+                                            <div style=" width: 400px; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25); background: white; color: black; text-decoration: none; font-weight: bold;">
+
+
+
+                                                <div>
+
+                                                    <img src="@item.Courses.ImageURL" width="100%" alt="@item.Courses.Name">
+                                                    <div style="padding: 25px;">
+
+
+
+                                                        <span class=""></span> @item.Courses.Name
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </a>
+                                    </div>
+                                }
+
+                            }
 
                         }
 
 
                     </div>
-                </div>
+                                </div>
 
 
 

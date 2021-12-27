@@ -228,3 +228,11 @@ C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.
 C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\ref\DyDx_Academy.dll
 C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\DyDx_Academy.pdb
 C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\DyDx_Academy.genruntimeconfig.cache
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Index.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part1.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part2.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part3.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part4.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part5.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part6.cshtml.g.cs
+C:\Users\BestO\Documents\GitHub\DyDx_Academy_CSharp\DyDx_Academy\obj\Debug\net5.0\Razor\Views\JavaScript_101\Part7.cshtml.g.cs

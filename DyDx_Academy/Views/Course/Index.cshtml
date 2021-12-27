@@ -20,15 +20,15 @@
 
         @*
 
-        <form class="form-inline my-2 my-lg-0" asp-controller="Course" asp-action="Filter" style=" display: flex; width: 50%; margin: 0 auto; margin-top: 0px; margin-bottom: 0px; padding: 50px; }">
-            <input name="searchString" type="text" class="form-control" placeholder="Search for Course" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
-        </form>
+            <form class="form-inline my-2 my-lg-0" asp-controller="Course" asp-action="Filter" style=" display: flex; width: 50%; margin: 0 auto; margin-top: 0px; margin-bottom: 0px; padding: 50px; }">
+                <input name="searchString" type="text" class="form-control" placeholder="Search for Course" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+            </form>
 
         *@
-        <form class="form-inline my-2 my-lg-0" asp-controller="Course" asp-action="Search" style=" display: flex; width: 85%; margin: 0 auto; margin-top: 0px; margin-bottom: 0px; padding: 50px; }">
+        <form class="form-inline my-2 my-lg-0" asp-controller="Course" asp-action="Search" style=" display: flex; width: 80%; margin: 0 auto; margin-top: 0px; margin-bottom: 0px; padding: 50px; }">
             <div style="background: white; border-radius: 30px; padding: 10px 30px; width:100%">
-                <input name="searchString" type="text" class="" placeholder="Search for Course" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 87%; border: none; outline: none !important; font-size: 1.7rem;">
+                <input name="searchString" type="text" class="" placeholder="ค้นหาคอร์สเรียนของคุณ" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 95%; border: none; outline: none !important; font-size: 1.7rem;">
                 <button class="" style="background:none; border:none" type="submit"><i class="bi bi-search" style="font-size: 1.7rem;"></i></button>
             </div>
 
@@ -51,7 +51,11 @@
                                     <p class="card-text">
                                         <h5 class="card-title" style="font-weight: revert; font-size: 1.7rem; white-space: nowrap;">
                                             @item.Name
-                                            <a class="text-dark float-right" style="float: right;" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                                            {
+
+                                                <a class="text-dark float-right" style="float: right;" asp-action="Edit" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
+                                            }
                                         </h5>
                                     </p>
                                     <p class="card-text "><b>Category: </b><a class="text-white" style="border-radius: 30px; background-color: lightblue; width: 54%; padding: 2px 10px; text-decoration:none;">@item.CourseCategory</a></p>
@@ -101,7 +105,11 @@
     <div class="row"></div>
 </div>
 
-@await Html.PartialAsync("_CreateItem", "Course")
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            {
+
+    @await Html.PartialAsync("_CreateItem", "Course")
+            }
 
 
 <script>
@@ -127,7 +135,6 @@
         height: 80px;
         overflow: hidden;
         text-overflow: ellipsis;
-
     }
 
 
@@ -155,9 +162,8 @@
         background: #fff;
         text-align: center;
     }
-        h2
 
-    {
+    h2 {
         color: #1a1a1a;
     }
 

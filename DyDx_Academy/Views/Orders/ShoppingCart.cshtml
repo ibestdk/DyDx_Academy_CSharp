@@ -1,62 +1,76 @@
 ﻿@using DyDx_Academy.ViewModels;
 @model ShoppingCartVM
 
+
 @{ ViewData["Title"] = "All orders"; }
 
 
-<div class="row" style="min-height:880px" >
+<div class="row" style="min-height:880px">
     <div class="col-md-8 offset-2">
         <div class="text-center" style="margin-top: 160px">
-            <h2>You shopping cart summary</h2>
+            <h2>ตระกร้าสินค้าของคุณ</h2>
         </div>
-
+        @{ int i = 1;}
         <table class="table" style="margin-top: 80px">
             <thead>
                 <tr>
-                    <th>Selected amount</th>
-                    <th>Movie</th>
-                    <th>Price</th>
-                    <th>Subtotal</th>
+                    <th>รายการ</th>
+                    <th>คอร์ส</th>
+                    <th>ราคา</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model.ShoppingCart.ShoppingCartItems)
                 {
-                <tr>
-                    <td class="align-middle">@item.Amount</td>
-                    <td class="align-middle">@item.Courses.Name</td>
-                    <td class="align-middle">@item.Courses.Price.ToString("c")</td>
-                    <td class="align-middle">@((item.Amount*item.Courses.Price).ToString("c"))</td>
-
-                    
-                    <td class="align-middle">
+    <tr>
+        <td class="align-middle">@(i++).</td>
+        <td class="align-middle">@item.Courses.Name</td>
+        <td class="align-middle">@item.Courses.Price.ToString("c")</td>
 
 
+        <td class="align-middle">
 
-                        <a class="text-danger" asp-controller="Orders" asp-action="RemoveItemFromShoppingCart"
-                           asp-route-id="@item.Courses.Id">
-                            <i class="bi bi-cart-dash"></i>
-                        </a>
-                        @*
-            <a class="text-success" asp-controller="Orders" asp-action="AddItemToShoppingCart"
+
+
+            <a class="text-danger" asp-controller="Orders" asp-action="RemoveItemFromShoppingCart"
                asp-route-id="@item.Courses.Id">
-                <i class="bi bi-cart-plus"></i>
+                <i class="bi bi-cart-dash"></i>
             </a>
+            @*
+                    <a class="text-success" asp-controller="Orders" asp-action="AddItemToShoppingCart"
+                       asp-route-id="@item.Courses.Id">
+                        <i class="bi bi-cart-plus"></i>
+                    </a>
 
 
-        </td>
-                        *@
+                </td>
+            *@
 
-</tr>
-}
+    </tr>}
             </tbody>
             <tfoot style="margin-top: 40px">
                 <tr>
-                    <td colspan="2"></td>
-                    <td><b>Total:</b></td>
+                    <td colspan="1"></td>
+                    <td><b>รวม:</b></td>
                     <td>
                         @Model.ShoppingCartTotal.ToString("c")
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="1"></td>
+                    <td><b>โปรโมชั่นพิเศษ:</b></td>
+                    <td>
+                        -@Model.ShoppingCartTotal.ToString("c")
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="1"></td>
+                    <td><b>รวมทั้งสิ้น:</b></td>
+                    <td>
+                        ฿0.00
                     </td>
                     <td></td>
                 </tr>
@@ -69,29 +83,34 @@
 
                 <span style="padding:5px"></span>
                 <a class="btn btn-outline-success" asp-controller="Course" asp-action="Index">
-                    Add more items
+                    เลือกคอร์สเพิ่ม
                 </a>
                 <span style="padding:5px"></span>
-                <a class="btn btn-outline-success" asp-controller="Course" asp-action="Index">
-                    Pay With DyDx Point
-                </a>
+
+                <a class="btn btn-outline-success" onclick="myFunction()" />
+                Pay With DyDx Point
+
                 <a class="btn btn-outline-primary" asp-action="CompleteOrder">
-                    Complete order
+                    รับคอร์สฟรี (ช่วงโปรโมชั่นเท่านั้น)
                 </a>
-                <span style="padding:5px"></span>
-                <div id="paypal-btn"></div>
+                @*<span style="padding:5px"></span>
+                    <div id="paypal-btn"></div>*@
             </div>
         </div>
 
     </div>
 </div>
 
-
 @section Scripts{
 
-<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script>
+        function myFunction() {
+            alert("ระบบนี้ยังไม่เปิดให้บริการ เเต่สามารถกดรับคอร์สฟรีได้เลย!");
+        }
+    </script>
 
-<script>
+    <script>
 
     let _total = @Html.Raw(Model.ShoppingCartTotal);
 
@@ -133,5 +152,5 @@
 
         }, '#paypal-btn')
 
-</script>
+    </script>
 }

@@ -37,6 +37,12 @@
                                 <div class="form-group">
                                     <label asp-for="Password"></label>
                                     <input asp-for="Password" class="form-control" />
+                                    <div style="color:lightgray;">
+                                        <p style="margin: 0; font-size: 0.8rem;">อักษรพิเศษ !#$%^ อย่างน้อย 1 ตัว</p>
+                                        <p style="margin: 0; font-size: 0.8rem;">อักษรพิมใหญ่เเละพิมเล็ก ABC abc</p>
+                                        <p style="margin: 0; font-size: 0.8rem;">ตัวเลฃ 0-9</p>
+                                        <p style="margin: 0; font-size: 0.8rem;">รหัสผ่านขั้นต่ำ 8 ตัวไม่เกิน 20 ตัวอักษร</p>
+                                    </div>
                                     <span class="text-danger" asp-validation-for="Password"></span>
                                 </div>
 
